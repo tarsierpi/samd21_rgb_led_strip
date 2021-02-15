@@ -1,0 +1,24 @@
+[package]
+name = "living_room_lights"
+version = "0.1.0"
+authors = ["dajohns2"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+atsamd-hal = "0.12"
+cortex-m = "0.6.2"
+cortex-m-rt = "0.6.12"
+keypad = "0.1"
+panic-halt = "0.2"
+usb-device = "0.2"
+usbd-serial = "0.1"
+xiao_m0="0.9.0"
+
+[dev-dependencies]
+
+[features]
+default = ["usb", "rt", "atsamd-hal/samd21g", "atsamd-hal/unproven"]
+rt = ["atsamd-hal/samd21g-rt"]
+usb = ["atsamd-hal/usb"]
